@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teams Facility | Reliable Manpower Solution – Chakan, Pune</title>
+<meta name="description" content="Teams Facility provides reliable manpower along with industrial, stationery and housekeeping materials in Chakan, Pune – the right people and the right resources under one roof.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2a6b; --navy-dark:#061a47; --blue:#1565d8; --sky:#4aa3f0; --light:#eaf3ff;
+  --text:#1c2a44; --muted:#5b6b85; --white:#fff;
+  --grad:linear-gradient(135deg,var(--navy) 0%,var(--blue) 60%,var(--sky) 100%);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;color:var(--text);background:#fff;overflow-x:hidden;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1150px,100% - 32px);margin-inline:auto}
+
+/* ---------- NAV ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:100;transition:.35s}
+header.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(11,42,107,.12)}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand svg{width:46px;height:auto}
+.brand-text{font-weight:800;font-size:1.15rem;color:var(--white);letter-spacing:.5px;transition:.35s}
+.brand-text span{font-weight:500}
+header.scrolled .brand-text{color:var(--navy)}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{color:var(--white);font-weight:500;font-size:.95rem;position:relative;transition:.3s}
+header.scrolled .nav-links a{color:var(--navy)}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--sky);transition:.3s}
+.nav-links a:not(.btn):hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:50px;font-weight:600;transition:.3s;cursor:pointer;border:none;font-family:inherit;font-size:.95rem}
+.btn-primary{background:var(--white);color:var(--navy)!important}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
+.btn-blue{background:var(--grad);color:var(--white)!important;background-size:200% 200%;animation:shift 5s ease infinite}
+.btn-blue:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(21,101,216,.4)}
+.btn-outline{border:2px solid var(--white);color:var(--white)}
+.btn-outline:hover{background:var(--white);color:var(--navy)}
+header.scrolled .nav-links .btn-primary{background:var(--grad);color:#fff!important}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;width:32px;height:24px;position:relative}
+.menu-toggle span{position:absolute;left:0;width:100%;height:3px;border-radius:3px;background:#fff;transition:.3s}
+header.scrolled .menu-toggle span{background:var(--navy)}
+.menu-toggle span:nth-child(1){top:0}.menu-toggle span:nth-child(2){top:10px}.menu-toggle span:nth-child(3){top:20px}
+.menu-toggle.open span:nth-child(1){transform:rotate(45deg);top:10px}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:rotate(-45deg);top:10px}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100vh;background:var(--grad);background-size:200% 200%;animation:shift 12s ease infinite;position:relative;display:flex;align-items:center;overflow:hidden;color:#fff;padding:120px 0 140px}
+@keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;position:relative;z-index:2}
+.tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:8px 18px;border-radius:50px;font-size:.85rem;font-weight:500;margin-bottom:22px;backdrop-filter:blur(5px)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;line-height:1.15;margin-bottom:18px}
+.typed{color:#bfe0ff;border-right:3px solid #bfe0ff;padding-right:4px;animation:blink .8s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+.hero p{font-size:1.1rem;opacity:.9;max-width:540px;margin-bottom:34px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-visual{display:flex;justify-content:center;position:relative}
+.logo-float{width:min(340px,80%);filter:drop-shadow(0 25px 40px rgba(0,0,0,.3));animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.ring{position:absolute;border:2px solid rgba(255,255,255,.18);border-radius:50%;animation:pulse 4s ease-out infinite}
+.ring.r1{width:300px;height:300px}.ring.r2{width:420px;height:420px;animation-delay:1.3s}.ring.r3{width:540px;height:540px;animation-delay:2.6s}
+@keyframes pulse{0%{transform:scale(.8);opacity:0}40%{opacity:1}100%{transform:scale(1.15);opacity:0}}
+.bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.08);animation:rise linear infinite}
+@keyframes rise{from{transform:translateY(0)}to{transform:translateY(-120vh)}}
+.wave{position:absolute;bottom:-1px;left:0;width:100%;z-index:3;line-height:0}
+.wave svg{width:100%;height:110px}
+
+/* ---------- SECTIONS ---------- */
+section{padding:100px 0}
+.section-head{text-align:center;max-width:650px;margin:0 auto 60px}
+.eyebrow{color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:.8rem}
+.section-head h2{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--navy);font-weight:800;margin:8px 0 14px}
+.section-head p{color:var(--muted)}
+.underline{width:70px;height:4px;border-radius:4px;background:var(--grad);margin:0 auto}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-img{position:relative;border-radius:24px;background:var(--grad);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 30px 60px rgba(11,42,107,.25)}
+.about-img::before,.about-img::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08)}
+.about-img::before{width:70%;height:70%;top:-20%;right:-20%}
+.about-img::after{width:50%;height:50%;bottom:-15%;left:-15%}
+.about-img .icon-cluster{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;z-index:1;padding:30px}
+.mini{background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:26px 18px;color:#fff;text-align:center;font-weight:600;font-size:.9rem;transition:.4s}
+.mini:hover{transform:translateY(-6px) scale(1.04);background:rgba(255,255,255,.22)}
+.mini svg{width:38px;height:38px;margin-bottom:10px;stroke:#fff}
+.about-text h2{font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--navy);font-weight:800;margin:8px 0 18px;line-height:1.25}
+.about-text p{color:var(--muted);margin-bottom:16px}
+.checks{list-style:none;margin:24px 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.checks li{display:flex;gap:10px;align-items:center;font-weight:600;color:var(--navy);font-size:.95rem}
+.checks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--light);color:var(--blue);display:grid;place-items:center;font-size:.8rem;font-weight:800}
+
+/* services */
+.services{background:linear-gradient(180deg,#f5f9ff 0%,#fff 100%)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+.card{background:#fff;border-radius:20px;padding:36px 28px;box-shadow:0 10px 30px rgba(11,42,107,.07);position:relative;overflow:hidden;transition:.4s;border:1px solid #e6eefb}
+.card::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:0;transition:.4s;z-index:0}
+.card>*{position:relative;z-index:1}
+.card:hover{transform:translateY(-10px);box-shadow:0 25px 50px rgba(21,101,216,.25)}
+.card:hover::before{opacity:1}
+.card:hover h3,.card:hover p{color:#fff}
+.card:hover .card-icon{background:rgba(255,255,255,.2)}
+.card:hover .card-icon svg{stroke:#fff}
+.card-icon{width:66px;height:66px;border-radius:16px;background:var(--light);display:grid;place-items:center;margin-bottom:22px;transition:.4s}
+.card-icon svg{width:32px;height:32px;stroke:var(--blue);transition:.4s}
+.card h3{color:var(--navy);font-size:1.2rem;margin-bottom:10px;transition:.4s}
+.card p{color:var(--muted);font-size:.94rem;transition:.4s}
+
+/* about extras: founder, vision, mission, promise */
+.about-more{margin-top:70px;display:grid;grid-template-columns:1fr 1.3fr;gap:30px}
+.founder{background:var(--grad);color:#fff;border-radius:24px;padding:38px 32px;position:relative;overflow:hidden;box-shadow:0 25px 50px rgba(11,42,107,.25)}
+.founder::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.08);top:-70px;right:-70px}
+.avatar{width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.18);border:3px solid rgba(255,255,255,.5);display:grid;place-items:center;font-size:1.7rem;font-weight:800;margin-bottom:18px;position:relative;z-index:1}
+.founder .eyebrow{color:#bfe0ff}
+.founder h3{font-size:1.45rem;margin:4px 0 2px;position:relative;z-index:1}
+.founder .role{opacity:.8;font-size:.9rem;display:block;margin-bottom:18px}
+.founder p{opacity:.92;font-size:.95rem;margin-bottom:12px;position:relative;z-index:1}
+.vm{display:grid;gap:20px}
+.vm-card{background:#fff;border:1px solid #e6eefb;border-radius:20px;padding:28px;box-shadow:0 10px 30px rgba(11,42,107,.07);display:flex;gap:20px;align-items:flex-start;transition:.4s}
+.vm-card:hover{transform:translateX(8px);box-shadow:0 18px 40px rgba(21,101,216,.18);border-color:var(--sky)}
+.vm-icon{width:58px;height:58px;flex:none;border-radius:16px;background:var(--grad);display:grid;place-items:center;font-size:1.6rem}
+.vm-card h3{color:var(--navy);font-size:1.15rem;margin-bottom:6px}
+.vm-card p{color:var(--muted);font-size:.95rem}
+.promise{margin-top:30px;text-align:center;padding:46px 26px;border-radius:24px;background:var(--navy-dark);color:#fff;position:relative;overflow:hidden}
+.promise::before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(74,163,240,.3),transparent 70%);top:-250px;left:50%;transform:translateX(-50%)}
+.promise .eyebrow{color:var(--sky);position:relative}
+.promise blockquote{font-size:clamp(1.3rem,3vw,2rem);font-weight:800;line-height:1.35;margin-top:10px;position:relative}
+.promise blockquote span{background:linear-gradient(135deg,#fff,var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* products with category buttons */
+.products{background:linear-gradient(180deg,#fff 0%,#f5f9ff 100%)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px}
+.filter{padding:11px 20px;border-radius:50px;border:2px solid #d6e4fa;background:#fff;color:var(--navy);font-weight:600;font-family:inherit;cursor:pointer;transition:.3s;font-size:.88rem}
+.filter:hover{border-color:var(--blue);transform:translateY(-2px)}
+.filter.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 8px 20px rgba(21,101,216,.3)}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
+.item{background:#fff;border-radius:18px;padding:26px;border:1px solid #e6eefb;box-shadow:0 8px 24px rgba(11,42,107,.06);transition:transform .4s,box-shadow .4s,border-color .4s;display:flex;flex-direction:column}
+.item:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(21,101,216,.18);border-color:var(--sky)}
+.item.pop{animation:pop .45s ease both}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(15px)}to{opacity:1;transform:none}}
+.item-top{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.item-emoji{width:52px;height:52px;border-radius:14px;background:var(--light);display:grid;place-items:center;font-size:1.5rem;flex:none;transition:.4s}
+.item:hover .item-emoji{transform:rotate(-8deg) scale(1.1)}
+.item-cat{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--blue)}
+.item h3{color:var(--navy);font-size:1.05rem;line-height:1.3}
+.item p{color:var(--muted);font-size:.92rem;flex:1;margin-bottom:16px}
+.enq{font-weight:600;color:var(--blue);font-size:.9rem;align-self:flex-start;transition:.3s}
+.enq:hover{color:var(--navy);transform:translateX(4px)}
+.card .more{display:inline-block;margin-top:14px;font-weight:600;color:var(--blue);font-size:.9rem;transition:.4s}
+.card:hover .more{color:#fff}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.steps::before{content:"";position:absolute;top:38px;left:12%;right:12%;height:3px;background:repeating-linear-gradient(90deg,var(--sky) 0 10px,transparent 10px 20px)}
+.step{text-align:center;position:relative}
+.step-circle{width:78px;height:78px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:1.6rem;font-weight:800;margin:0 auto 18px;box-shadow:0 10px 25px rgba(21,101,216,.35);border:5px solid #fff;transition:.4s}
+.step:hover .step-circle{transform:scale(1.12) rotate(8deg)}
+.step h3{color:var(--navy);font-size:1.05rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.9rem}
+
+/* industries marquee */
+.industries{padding:50px 0;background:var(--light);overflow:hidden}
+.marquee{display:flex;gap:18px;width:max-content;animation:scroll 30s linear infinite}
+.marquee:hover{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.chip{background:#fff;padding:14px 28px;border-radius:50px;font-weight:600;color:var(--navy);white-space:nowrap;box-shadow:0 5px 15px rgba(11,42,107,.08)}
+
+/* CTA */
+.cta{background:var(--grad);background-size:200% 200%;animation:shift 10s ease infinite;color:#fff;text-align:center;border-radius:28px;padding:60px 30px;margin-top:-40px;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;margin-bottom:12px}
+.cta p{opacity:.9;margin-bottom:28px}
+.cta .hero-btns{justify-content:center}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.info-card{background:var(--grad);border-radius:24px;padding:40px 32px;color:#fff;position:relative;overflow:hidden}
+.info-card::after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:rgba(255,255,255,.08);bottom:-80px;right:-80px}
+.info-card h3{font-size:1.5rem;margin-bottom:6px}
+.info-card>p{opacity:.85;margin-bottom:30px}
+.info-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px;position:relative;z-index:1}
+.info-item .ic{width:48px;height:48px;flex:none;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;transition:.3s}
+.info-item:hover .ic{background:#fff}
+.info-item:hover .ic svg{stroke:var(--blue)}
+.info-item svg{width:22px;height:22px;stroke:#fff;transition:.3s}
+.info-item small{opacity:.75;display:block;font-size:.8rem}
+.info-item strong{font-weight:600;word-break:break-word}
+.person{margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.25);position:relative;z-index:1}
+.person strong{font-size:1.1rem}
+form{background:#fff;border-radius:24px;padding:40px 32px;box-shadow:0 20px 50px rgba(11,42,107,.1);border:1px solid #e6eefb}
+form h3{color:var(--navy);font-size:1.4rem;margin-bottom:22px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:13px 16px;border:2px solid #e3ebf8;border-radius:12px;font-family:inherit;font-size:.95rem;transition:.3s;background:#f9fbff;color:var(--text)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(21,101,216,.1)}
+.field textarea{resize:vertical;min-height:110px}
+.form-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-wa{background:#25d366;color:#fff}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(37,211,102,.4)}
+.map{margin-top:40px;border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(11,42,107,.1);height:340px}
+.map iframe{width:100%;height:100%;border:0}
+
+/* footer */
+footer{background:var(--navy-dark);color:#b9c8e6;padding:50px 0 24px;text-align:center}
+footer .brand{justify-content:center;margin-bottom:12px}
+footer .brand-text{color:#fff}
+footer p{font-size:.9rem}
+.foot-links{display:flex;justify-content:center;gap:24px;margin:20px 0;flex-wrap:wrap}
+.foot-links a:hover{color:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;margin-top:20px;font-size:.82rem}
+
+/* floating buttons */
+.float-wa{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;z-index:99;box-shadow:0 10px 25px rgba(37,211,102,.45);animation:bounce 2.5s infinite}
+.float-wa svg{width:32px;height:32px;fill:#fff}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.to-top{position:fixed;right:30px;bottom:96px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;z-index:99;opacity:0;pointer-events:none;transition:.3s;font-size:1.2rem}
+.to-top.show{opacity:1;pointer-events:auto}
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sky),#fff);z-index:200;width:0}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.left{transform:translateX(-50px)}.reveal.right{transform:translateX(50px)}
+.reveal.visible{opacity:1;transform:none}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:var(--navy);color:#fff;padding:14px 26px;border-radius:50px;z-index:300;transition:.4s;font-weight:500;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.toast.show{transform:translate(-50%,0)}
+
+/* responsive */
+@media(max-width:900px){
+  .hero-grid,.about-grid,.contact-grid,.about-more{grid-template-columns:1fr}
+  .hero{text-align:center}.hero p{margin-inline:auto}.hero-btns{justify-content:center}
+  .hero-visual{order:-1}.logo-float{width:200px}
+  .ring.r1{width:220px;height:220px}.ring.r2{width:300px;height:300px}.ring.r3{width:380px;height:380px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:40px}.steps::before{display:none}
+  .menu-toggle{display:block}
+  .nav-links{position:fixed;top:76px;right:0;left:0;flex-direction:column;background:#fff;padding:30px;gap:22px;box-shadow:0 20px 30px rgba(0,0,0,.1);transform:translateY(-150%);transition:.4s}
+  .nav-links.open{transform:none}
+  .nav-links a{color:var(--navy)!important}
+  .nav-links .btn-primary{background:var(--grad);color:#fff!important}
+}
+@media(max-width:560px){
+  section{padding:70px 0}
+  .row,.checks{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  form,.info-card{padding:30px 22px}
+  .brand-text{font-size:1rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- Logo symbol (reused) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gT" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b2a6b"/><stop offset="1" stop-color="#123c94"/></linearGradient>
+    <linearGradient id="gF" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1565d8"/><stop offset="1" stop-color="#4aa3f0"/></linearGradient>
+    <symbol id="tf" viewBox="0 0 260 120">
+      <path d="M18 0 H150 L132 24 H86 V120 H56 V24 H0 Z" fill="url(#gT)"/>
+      <path d="M128 120 L128 34 Q132 0 170 0 H260 L236 26 H170 Q158 26 158 40 V50 H232 L210 74 H158 V92 Q156 112 128 120 Z" fill="url(#gF)"/>
+    </symbol>
+    <symbol id="tf-white" viewBox="0 0 260 120">
+      <path d="M18 0 H150 L132 24 H86 V120 H56 V24 H0 Z" fill="#ffffff"/>
+      <path d="M128 120 L128 34 Q132 0 170 0 H260 L236 26 H170 Q158 26 158 40 V50 H232 L210 74 H158 V92 Q156 112 128 120 Z" fill="#bfe0ff"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header id="header">
+  <nav class="container">
+    <a href="#home" class="brand">
+      <svg viewBox="0 0 260 120"><use href="#tf-white" id="navLogo"/></svg>
+      <div class="brand-text">TEAMS <span>FACILITY</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact" class="btn btn-primary">Get a Quote</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div id="bubbles"></div>
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">📍 Chakan, Pune · Manpower & Workplace Supplies</span>
+      <h1>Your Trusted Partner for<br><span class="typed" id="typed"></span></h1>
+      <p>Teams Facility provides dependable manpower along with industrial, office and housekeeping materials — the right people and the right resources, under one roof.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">Get a Quote →</a>
+        <a href="#products" class="btn btn-outline">View Products</a>
+        <a href="tel:+918999758775" class="btn btn-outline">📞 Call Now</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <svg class="logo-float" viewBox="0 0 260 120"><use href="#tf-white"/></svg>
+    </div>
+  </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path fill="rgba(255,255,255,.35)" d="M0,64 C360,140 720,0 1440,80 L1440,120 L0,120 Z">
+        <animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0,64 C360,140 720,0 1440,80 L1440,120 L0,120 Z;M0,80 C400,10 900,130 1440,50 L1440,120 L0,120 Z;M0,64 C360,140 720,0 1440,80 L1440,120 L0,120 Z"/>
+      </path>
+      <path fill="#ffffff" d="M0,90 C480,20 960,130 1440,70 L1440,120 L0,120 Z">
+        <animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0,90 C480,20 960,130 1440,70 L1440,120 L0,120 Z;M0,70 C500,120 1000,30 1440,90 L1440,120 L0,120 Z;M0,90 C480,20 960,130 1440,70 L1440,120 L0,120 Z"/>
+      </path>
+    </svg>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-img reveal left">
+      <div class="icon-cluster">
+        <div class="mini"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><div>Skilled Teams</div></div>
+        <div class="mini"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div>Verified Staff</div></div>
+        <div class="mini"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div>Timely Delivery</div></div>
+        <div class="mini"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><div>Workplace Supplies</div></div>
+      </div>
+    </div>
+    <div class="about-text reveal right">
+      <span class="eyebrow">About Teams Facility</span>
+      <h2>The right people and the right resources, under one roof.</h2>
+      <p>Teams Facility is a professional workforce and workplace solutions company committed to helping businesses operate efficiently with the right people and the right resources.</p>
+      <p>We provide reliable manpower solutions along with industrial and administrative materials required for smooth day-to-day operations. From workforce deployment and facility support to essential workplace supplies, we aim to provide our clients with convenient, dependable and cost-effective solutions under one roof.</p>
+      <p>Our approach is built on reliability, quality, transparency and long-term relationships. We understand that every organization has different requirements, so we work closely with our clients to deliver solutions that match their specific operational needs.</p>
+      <ul class="checks">
+        <li>Reliability</li>
+        <li>Quality</li>
+        <li>Transparency</li>
+        <li>Long-term relationships</li>
+      </ul>
+      <a href="#services" class="btn btn-blue">Explore Our Services →</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="about-more">
+      <div class="founder reveal left">
+        <div class="avatar">NM</div>
+        <span class="eyebrow">Our Founder</span>
+        <h3>Neha Manwatkar</h3>
+        <span class="role">Founder, Teams Facility</span>
+        <p>With a vision to create a dependable and professional workplace solutions company, Neha Manwatkar founded Teams Facility with a focus on delivering quality manpower and operational support to businesses.</p>
+        <p>Her vision is to build Teams Facility as a trusted partner for organizations, providing the right workforce, essential resources and responsive service while maintaining professionalism and accountability.</p>
+      </div>
+      <div class="vm">
+        <div class="vm-card reveal right">
+          <div class="vm-icon">🎯</div>
+          <div><h3>Our Vision</h3><p>To become a trusted partner for businesses by providing reliable manpower and complete workplace support solutions.</p></div>
+        </div>
+        <div class="vm-card reveal right">
+          <div class="vm-icon">🚀</div>
+          <div><h3>Our Mission</h3><p>To connect businesses with the right people and resources while delivering professional, timely and dependable service.</p></div>
+        </div>
+        <div class="vm-card reveal right">
+          <div class="vm-icon">🤝</div>
+          <div><h3>Our Values</h3><p>Reliability, quality, transparency and long-term relationships guide everything we do for our clients.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="promise reveal">
+      <span class="eyebrow">Our Promise</span>
+      <blockquote>“The Right People. The Right Resources. <span>One Reliable Partner.</span>”</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Offer</span>
+      <h2>Our Services</h2>
+      <p>Manpower and workplace materials, all from one reliable partner.</p>
+      <div class="underline"></div>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M5 20V8l5 4V8l5 4V4h4v16"/></svg></div><h3>Industrial Manpower</h3><p>Skilled and semi-skilled workers, helpers, machine operators and loaders for manufacturing units and plants.</p></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M9 21V10l-6 4M9 10l6-6v17M15 4l6 4v13"/></svg></div><h3>Housekeeping Services</h3><p>Trained housekeeping staff for offices, factories, hospitals and residential societies to keep spaces spotless.</p></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div><h3>Stationery & Office Supplies</h3><p>Printer paper, notepads, files, folders, binders, pens, markers, staplers and desk organizers for smooth daily administration.</p><a href="#products" class="more" data-jump="paper">View items →</a></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 4H8z"/><path d="M8 7h8l1 14H7z"/><path d="M12 11v6"/></svg></div><h3>Housekeeping Material</h3><p>Cleaning wipes, surface cleaners, hand sanitizers and pantry & breakroom supplies to keep your workplace clean and hygienic.</p><a href="#products" class="more" data-jump="safety">View items →</a></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12l8.73-5.04M12 22V12"/></svg></div><h3>Industrial Materials</h3><p>Packaging tape, heavy-duty twine, safety signage, shift logs, inspection checklists and other shop-floor consumables.</p><a href="#products" class="more" data-jump="binding">View items →</a></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>IT & Office Equipment</h3><p>Desktop computers, multi-function printers, scanners, shredders, intercoms, desk phones and power accessories.</p><a href="#products" class="more" data-jump="tech">View items →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES MARQUEE -->
+<div class="industries">
+  <div class="marquee" id="marquee">
+    <span class="chip">🏭 Manufacturing</span><span class="chip">🚗 Automobile</span><span class="chip">📦 Warehousing</span><span class="chip">🏢 Corporate Offices</span><span class="chip">🏥 Hospitals</span><span class="chip">🏘️ Housing Societies</span><span class="chip">🏨 Hotels</span><span class="chip">🏗️ Construction</span><span class="chip">🛒 Retail</span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Workplace Supplies</span>
+      <h2>Industrial & Office Materials</h2>
+      <p>Choose a category to see what we supply. Tap “Enquire” on any item to ask us on WhatsApp.</p>
+      <div class="underline"></div>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="items" id="items"></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">How It Works</span>
+      <h2>Simple 4-Step Process</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-circle">1</div><h3>Share Requirement</h3><p>Tell us the manpower or materials you need.</p></div>
+      <div class="step reveal"><div class="step-circle">2</div><h3>Get a Quote</h3><p>We send a clear, transparent quotation.</p></div>
+      <div class="step reveal"><div class="step-circle">3</div><h3>Timely Delivery</h3><p>Staff report to your site and materials arrive on time.</p></div>
+      <div class="step reveal"><div class="step-circle">4</div><h3>Ongoing Support</h3><p>Responsive service for replacements and repeat orders.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="container">
+  <div class="cta reveal">
+    <h2>Need manpower or workplace supplies?</h2>
+    <p>Talk to us and get the right people and the right resources for your business.</p>
+    <div class="hero-btns">
+      <a href="tel:+918999758775" class="btn btn-primary">📞 89997 58775</a>
+      <a href="https://wa.me/918999758775?text=Hello%20Teams%20Facility%2C%20I%20need%20manpower%20services." target="_blank" class="btn btn-outline">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <p>Send us your requirement and we'll get back to you shortly.</p>
+      <div class="underline"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="info-card reveal left">
+        <h3>Teams Facility</h3>
+        <p>Reliable Manpower Solution</p>
+        <a href="tel:+918999758775" class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><small>Phone</small><strong>+91 89997 58775</strong></div></a>
+        <a href="mailto:Teamsfacility21@gmail.com" class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div><div><small>Email</small><strong>Teamsfacility21@gmail.com</strong></div></a>
+        <a href="https://maps.google.com/?q=Nighoje,Chakan,Pune+410501" target="_blank" class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><small>Address</small><strong>Nighoje, Chakan,<br>Pune – 410501</strong></div></a>
+        <div class="person"><small style="opacity:.75">Founder</small><br><strong>Neha Manwatkar</strong></div>
+      </div>
+
+      <form id="enquiry" class="reveal right" onsubmit="return false">
+        <h3>Send an Enquiry</h3>
+        <div class="row">
+          <div class="field"><label for="name">Your Name *</label><input id="name" required placeholder="Full name"></div>
+          <div class="field"><label for="company">Company</label><input id="company" placeholder="Company name"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="phone">Phone *</label><input id="phone" type="tel" required placeholder="10-digit mobile"></div>
+          <div class="field"><label for="service">Service Needed</label>
+            <select id="service">
+              <option>Industrial Manpower</option><option>Housekeeping Services</option><option>Stationery & Office Supplies</option>
+              <option>Housekeeping Material</option><option>Industrial Materials</option><option>IT & Office Equipment</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="msg">Requirement Details</label><textarea id="msg" placeholder="e.g. Need 10 helpers for our plant from next week"></textarea></div>
+        <div class="form-btns">
+          <button type="button" class="btn btn-wa" onclick="sendEnquiry('wa')">💬 Send via WhatsApp</button>
+          <button type="button" class="btn btn-blue" onclick="sendEnquiry('mail')">✉️ Send via Email</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="map reveal">
+      <iframe src="https://maps.google.com/maps?q=Nighoje,%20Chakan,%20Pune%20410501&z=13&output=embed" loading="lazy" title="Teams Facility location"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand">
+      <svg viewBox="0 0 260 120" style="width:50px"><use href="#tf-white"/></svg>
+      <div class="brand-text">TEAMS <span>FACILITY</span></div>
+    </div>
+    <p>Reliable Manpower Solution · Nighoje, Chakan, Pune – 410501</p>
+    <div class="foot-links">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#products">Products</a><a href="#contact">Contact</a>
+      <a href="tel:+918999758775">+91 89997 58775</a>
+    </div>
+    <div class="copy">© <span id="year"></span> Teams Facility. All rights reserved.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918999758775?text=Hello%20Teams%20Facility%2C%20I%20need%20manpower%20services." target="_blank" class="float-wa" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.8c1.9 1 4 1.6 6.2 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.1 1.1-3.9-.3-.4C5.8 20 5.3 18 5.3 16 5.3 10.1 10.1 5.4 16 5.4S26.7 10.1 26.7 16 21.9 26.6 16 26.6zm5.9-8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+<a href="#home" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+<div class="toast" id="toast"></div>
+
+<script>
+// Typing effect
+const words=["Industrial Manpower","Housekeeping Staff","Office Stationery","Housekeeping Material","Industrial Supplies"];
+let wi=0,ci=0,del=false;const typed=document.getElementById('typed');
+(function type(){
+  const w=words[wi];
+  typed.textContent=w.slice(0,ci);
+  if(!del&&ci<w.length){ci++;setTimeout(type,85)}
+  else if(!del){del=true;setTimeout(type,1600)}
+  else if(ci>0){ci--;setTimeout(type,40)}
+  else{del=false;wi=(wi+1)%words.length;setTimeout(type,300)}
+})();
+
+// Floating bubbles in hero
+const b=document.getElementById('bubbles');
+for(let i=0;i<14;i++){
+  const s=document.createElement('span');const size=Math.random()*60+15;
+  s.className='bubble';
+  Object.assign(s.style,{width:size+'px',height:size+'px',left:Math.random()*100+'%',bottom:'-80px',animationDuration:(Math.random()*15+12)+'s',animationDelay:(Math.random()*-20)+'s'});
+  b.appendChild(s);
+}
+
+// ---------- PRODUCTS (edit this list to add/remove items) ----------
+const CATS={
+  paper:"Paper & Documentation", filing:"Filing & Organization", writing:"Writing & Correction",
+  binding:"Binding & Fastening", tech:"Technology & Hardware", safety:"Facility & Safety"
+};
+const PRODUCTS=[
+  {c:"paper",i:"📄",t:"Printer & Copier Paper",d:"Standard reams for general printing, copying and reporting."},
+  {c:"paper",i:"🗒️",t:"Specialty Pads & Sticky Notes",d:"Notepads, adhesive notes and message pads for quick communication."},
+  {c:"paper",i:"📋",t:"Forms & Logs",d:"Shift logs, safety inspection checklists and visitor logbooks."},
+  {c:"filing",i:"📁",t:"Folders & Binders",d:"File folders, hanging folders and ring binders with dividers."},
+  {c:"filing",i:"🏷️",t:"Labels & Dividers",d:"Color-coded labels and index tabs for archiving compliance and operational documents."},
+  {c:"filing",i:"🗃️",t:"Desk Organizers",d:"Trays, sorters and storage boxes to keep shared workspaces clear."},
+  {c:"writing",i:"🖊️",t:"Writing Instruments",d:"Ballpoint pens, permanent markers, highlighters and whiteboard markers."},
+  {c:"writing",i:"✏️",t:"Correction Supplies",d:"Correction tape, correction fluid and erasers."},
+  {c:"binding",i:"📎",t:"Desktop Fasteners",d:"Heavy-duty staplers, staple removers, paper clips and binder clips."},
+  {c:"binding",i:"🧵",t:"Adhesives & Bands",d:"Packaging tape, dispenser rolls, rubber bands and heavy-duty twine."},
+  {c:"tech",i:"🖥️",t:"Computing & Printing",d:"Desktop computers, multi-function printers, scanners and shredders."},
+  {c:"tech",i:"☎️",t:"Communication Devices",d:"Intercom systems, desk phones and mobile communication units."},
+  {c:"tech",i:"🔌",t:"Power Accessories",d:"Surge protectors, extension cords and replacement batteries."},
+  {c:"safety",i:"🧴",t:"Pantry & Hygiene",d:"Cleaning wipes, hand sanitizers, surface cleaners and basic breakroom supplies."},
+  {c:"safety",i:"⚠️",t:"Safety Signage",d:"Emergency exit signs, hazard warnings and visitor badges for the administration lobby."}
+];
+const filtersEl=document.getElementById('filters'),itemsEl=document.getElementById('items');
+function renderItems(cat){
+  const list=cat==='all'?PRODUCTS:PRODUCTS.filter(p=>p.c===cat);
+  itemsEl.innerHTML=list.map((p,n)=>`
+    <div class="item pop" style="animation-delay:${n*0.05}s">
+      <div class="item-top"><div class="item-emoji">${p.i}</div><div><div class="item-cat">${CATS[p.c]}</div><h3>${p.t}</h3></div></div>
+      <p>${p.d}</p>
+      <a class="enq" target="_blank" href="https://wa.me/918999758775?text=${encodeURIComponent('Hello Teams Facility, I would like a quote for: '+p.t)}">Enquire →</a>
+    </div>`).join('');
+  filtersEl.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.dataset.cat===cat));
+}
+filtersEl.innerHTML=[['all','All Products'],...Object.entries(CATS)].map(([k,v])=>`<button class="filter" data-cat="${k}">${v}</button>`).join('');
+filtersEl.addEventListener('click',e=>{const b=e.target.closest('.filter');if(b)renderItems(b.dataset.cat)});
+document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',()=>renderItems(a.dataset.jump)));
+renderItems('all');
+
+// Duplicate marquee for seamless loop
+const m=document.getElementById('marquee');m.innerHTML+=m.innerHTML;
+
+// Header, progress bar, back-to-top, nav logo colour
+const header=document.getElementById('header'),toTop=document.getElementById('toTop'),prog=document.getElementById('progress'),navLogo=document.getElementById('navLogo');
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY,scrolled=y>60;
+  header.classList.toggle('scrolled',scrolled);
+  navLogo.setAttribute('href',scrolled?'#tf':'#tf-white');
+  toTop.classList.toggle('show',y>500);
+  prog.style.width=(y/(document.body.scrollHeight-innerHeight)*100)+'%';
+});
+
+// Mobile menu
+const tog=document.getElementById('menuToggle'),links=document.getElementById('navLinks');
+tog.onclick=()=>{tog.classList.toggle('open');links.classList.toggle('open')};
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>{tog.classList.remove('open');links.classList.remove('open')});
+
+// Scroll reveal with stagger
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>{
+  const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));
+  if(sibs.length>2) el.style.transitionDelay=(sibs.indexOf(el)*0.1)+'s';
+  io.observe(el);
+});
+
+// Card tilt on hover (desktop)
+if(matchMedia('(hover:hover)').matches){
+  document.querySelectorAll('.card').forEach(c=>{
+    c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`translateY(-10px) rotateX(${-y*8}deg) rotateY(${x*8}deg)`});
+    c.addEventListener('mouseleave',()=>c.style.transform='');
+  });
+}
+
+// Enquiry form -> WhatsApp or Email (works on free static hosting, no server needed)
+function toast(t){const el=document.getElementById('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),3000)}
+function sendEnquiry(via){
+  const v=id=>document.getElementById(id).value.trim();
+  if(!v('name')||!v('phone')){toast('Please enter your name and phone number');return}
+  const text=`Hello Teams Facility,\n\nName: ${v('name')}\nCompany: ${v('company')||'-'}\nPhone: ${v('phone')}\nService: ${v('service')}\n\nRequirement: ${v('msg')||'-'}`;
+  if(via==='wa') window.open('https://wa.me/918999758775?text='+encodeURIComponent(text),'_blank');
+  else location.href='mailto:Teamsfacility21@gmail.com?subject='+encodeURIComponent('Enquiry - '+v('name'))+'&body='+encodeURIComponent(text);
+  toast('Opening '+(via==='wa'?'WhatsApp':'your email app')+'…');
+}
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
