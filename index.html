@@ -64,11 +64,11 @@
         "name": "Services and Supplies",
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial Manpower Supply" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Housekeeping Services" } },
           { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Stationery & Office Supplies" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Housekeeping Material" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Housekeeping Services & Material" } },
           { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Industrial Materials" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "IT & Office Equipment" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "IT & Office Equipment" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate Event Support" } }
         ]
       }
     },
@@ -184,7 +184,9 @@ section{padding:100px 0}
 
 /* services */
 .services{background:linear-gradient(180deg,#f5f9ff 0%,#fff 100%)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
 .card{background:#fff;border-radius:20px;padding:36px 28px;box-shadow:0 10px 30px rgba(11,42,107,.07);position:relative;overflow:hidden;transition:.4s;border:1px solid #e6eefb}
 .card::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:0;transition:.4s;z-index:0}
 .card>*{position:relative;z-index:1}
@@ -455,9 +457,9 @@ footer p{font-size:.9rem}
     <div class="about-more">
       <div class="founder reveal left">
         <div class="avatar">NM</div>
-        <span class="eyebrow">Our Founder</span>
+        <span class="eyebrow">Our Director</span>
         <h3>Neha Manwatkar</h3>
-        <span class="role">Founder, Teams Facility</span>
+        <span class="role">Director, Teams Facility</span>
         <p>With a vision to create a dependable and professional workplace solutions company, Neha Manwatkar founded Teams Facility with a focus on delivering quality manpower and operational support to businesses.</p>
         <p>Her vision is to build Teams Facility as a trusted partner for organizations, providing the right workforce, essential resources and responsive service while maintaining professionalism and accountability.</p>
       </div>
@@ -490,16 +492,16 @@ footer p{font-size:.9rem}
     <div class="section-head reveal">
       <span class="eyebrow">What We Offer</span>
       <h2>Manpower & Supply Services in Chakan, Pune</h2>
-      <p>Manpower and workplace materials for factories, offices and societies, all from one reliable partner.</p>
+      <p>Manpower, event support and workplace materials for factories, offices and societies, all from one reliable partner.</p>
       <div class="underline"></div>
     </div>
     <div class="cards">
-      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M5 20V8l5 4V8l5 4V4h4v16"/></svg></div><h3>Industrial Manpower</h3><p>Skilled and semi-skilled workers, helpers, machine operators and loaders for manufacturing units and plants.</p></div>
-      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M9 21V10l-6 4M9 10l6-6v17M15 4l6 4v13"/></svg></div><h3>Housekeeping Services</h3><p>Trained housekeeping staff for offices, factories, hospitals and residential societies to keep spaces spotless.</p></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M5 20V8l5 4V8l5 4V4h4v16"/></svg></div><h3>Industrial Manpower</h3><p>Skilled and semi-skilled workers, helpers, machine operators, loaders and security staff for manufacturing units and plants.</p><a href="#products" class="more" data-jump="manpower">View items →</a></div>
       <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div><h3>Stationery & Office Supplies</h3><p>Printer paper, notepads, files, folders, binders, pens, markers, staplers and desk organizers for smooth daily administration.</p><a href="#products" class="more" data-jump="paper">View items →</a></div>
-      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 4H8z"/><path d="M8 7h8l1 14H7z"/><path d="M12 11v6"/></svg></div><h3>Housekeeping Material</h3><p>Cleaning wipes, surface cleaners, hand sanitizers and pantry & breakroom supplies to keep your workplace clean and hygienic.</p><a href="#products" class="more" data-jump="safety">View items →</a></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 4H8z"/><path d="M8 7h8l1 14H7z"/><path d="M12 11v6"/></svg></div><h3>Housekeeping Services & Material</h3><p>Trained housekeeping staff for offices, factories, hospitals and societies, plus cleaning wipes, surface cleaners, sanitizers and pantry supplies.</p><a href="#products" class="more" data-jump="safety">View items →</a></div>
       <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12l8.73-5.04M12 22V12"/></svg></div><h3>Industrial Materials</h3><p>Packaging tape, heavy-duty twine, safety signage, shift logs, inspection checklists and other shop-floor consumables.</p><a href="#products" class="more" data-jump="binding">View items →</a></div>
       <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>IT & Office Equipment</h3><p>Desktop computers, multi-function printers, scanners, shredders, intercoms, desk phones and power accessories.</p><a href="#products" class="more" data-jump="tech">View items →</a></div>
+      <div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m12 13 1.2 2.4 2.6.4-1.9 1.8.5 2.6-2.4-1.3-2.4 1.3.5-2.6-1.9-1.8 2.6-.4z"/></svg></div><h3>Corporate Event Support</h3><p>Venue booking, catering, event setup, guest coordination, annual functions and team-building activities for smooth company events.</p><a href="#products" class="more" data-jump="events">View items →</a></div>
     </div>
     <p class="areas-label">Areas we serve</p>
     <div class="areas">
@@ -519,9 +521,9 @@ footer p{font-size:.9rem}
 <section class="products" id="products">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Workplace Supplies</span>
-      <h2>Industrial & Office Materials</h2>
-      <p>Choose a category to see what we supply. Tap “Enquire” on any item to ask us on WhatsApp.</p>
+      <span class="eyebrow">Services & Supplies</span>
+      <h2>Manpower, Events & Workplace Materials</h2>
+      <p>Choose a category to see what we offer. Tap “Enquire” on any item to ask us on WhatsApp.</p>
       <div class="underline"></div>
     </div>
     <div class="filters" id="filters"></div>
@@ -591,7 +593,7 @@ footer p{font-size:.9rem}
         <a href="tel:+918999758775" class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><small>Phone</small><strong>+91 89997 58775</strong></div></a>
         <a href="mailto:Teamsfacility21@gmail.com" class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div><div><small>Email</small><strong>Teamsfacility21@gmail.com</strong></div></a>
         <a href="https://maps.google.com/?q=Nighoje,Chakan,Pune+410501" target="_blank" rel="noopener" class="info-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><small>Address</small><strong>Nighoje, Chakan,<br>Pune – 410501</strong></div></a>
-        <div class="person"><small style="opacity:.75">Founder</small><br><strong>Neha Manwatkar</strong></div>
+        <div class="person"><small style="opacity:.75">Director</small><br><strong>Neha Manwatkar</strong></div>
       </div>
 
       <form id="enquiry" class="reveal right" onsubmit="return false">
@@ -604,8 +606,8 @@ footer p{font-size:.9rem}
           <div class="field"><label for="phone">Phone *</label><input id="phone" type="tel" required placeholder="10-digit mobile"></div>
           <div class="field"><label for="service">Service Needed</label>
             <select id="service">
-              <option>Industrial Manpower</option><option>Housekeeping Services</option><option>Stationery & Office Supplies</option>
-              <option>Housekeeping Material</option><option>Industrial Materials</option><option>IT & Office Equipment</option><option>Other</option>
+              <option>Industrial Manpower</option><option>Stationery & Office Supplies</option>
+              <option>Housekeeping Services & Material</option><option>Industrial Materials</option><option>IT & Office Equipment</option><option>Corporate Event Support</option><option>Other</option>
             </select>
           </div>
         </div>
@@ -668,10 +670,24 @@ for(let i=0;i<14;i++){
 
 // ---------- PRODUCTS (edit this list to add/remove items) ----------
 const CATS={
+  manpower:"Industrial Manpower", events:"Corporate Event Support",
   paper:"Paper & Documentation", filing:"Filing & Organization", writing:"Writing & Correction",
   binding:"Binding & Fastening", tech:"Technology & Hardware", safety:"Facility & Safety"
 };
 const PRODUCTS=[
+  {c:"manpower",i:"👷",t:"Labor Contract",d:"Skilled and unskilled labor as per requirement."},
+  {c:"manpower",i:"🛠️",t:"Technical People",d:"Skilled technicians for various industries."},
+  {c:"manpower",i:"🧹",t:"Housekeeping Staff",d:"Trained housekeeping and facility staff."},
+  {c:"manpower",i:"🛡️",t:"Security Staff",d:"Trained security guards and supervisors for plants, offices, warehouses and societies."},
+  {c:"manpower",i:"🏭",t:"Blue-Collar Employees",d:"Production, warehouse, loading-unloading and other operations."},
+  {c:"manpower",i:"💼",t:"White-Collar Employees",d:"Office support and administrative staff."},
+  {c:"manpower",i:"🧑‍💼",t:"Technical & Management Level",d:"Supervisors, executives and management-level manpower."},
+  {c:"events",i:"🏛️",t:"Venue Booking",d:"Conference halls, hotels and event locations."},
+  {c:"events",i:"🍽️",t:"Catering Support",d:"Breakfast, lunch, snacks and refreshments."},
+  {c:"events",i:"🎤",t:"Event Setup",d:"Seating, stage, decoration, sound system and projector."},
+  {c:"events",i:"🎟️",t:"Guest Coordination",d:"Invitations, attendance and guest arrangements."},
+  {c:"events",i:"🎉",t:"Annual Functions & Celebrations",d:"Festival celebrations, employee appreciation events and annual days."},
+  {c:"events",i:"🤝",t:"Team-Building Activities",d:"Indoor games, outdoor activities and employee engagement programs."},
   {c:"paper",i:"📄",t:"Printer & Copier Paper",d:"Standard reams for general printing, copying and reporting."},
   {c:"paper",i:"🗒️",t:"Specialty Pads & Sticky Notes",d:"Notepads, adhesive notes and message pads for quick communication."},
   {c:"paper",i:"📋",t:"Forms & Logs",d:"Shift logs, safety inspection checklists and visitor logbooks."},
@@ -699,7 +715,7 @@ function renderItems(cat){
     </div>`).join('');
   filtersEl.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.dataset.cat===cat));
 }
-filtersEl.innerHTML=[['all','All Products'],...Object.entries(CATS)].map(([k,v])=>`<button class="filter" data-cat="${k}">${v}</button>`).join('');
+filtersEl.innerHTML=[['all','All'],...Object.entries(CATS)].map(([k,v])=>`<button class="filter" data-cat="${k}">${v}</button>`).join('');
 filtersEl.addEventListener('click',e=>{const b=e.target.closest('.filter');if(b)renderItems(b.dataset.cat)});
 document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',()=>renderItems(a.dataset.jump)));
 renderItems('all');
