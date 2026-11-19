@@ -68,7 +68,8 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Housekeeping Services & Material" } },
           { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Industrial Materials" } },
           { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "IT & Office Equipment" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate Event Support" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate Event Support" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory Licensing & Statutory Compliance Support" } }
         ]
       }
     },
@@ -81,6 +82,8 @@
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide trained housekeeping staff for offices, factories, hospitals, hotels and residential societies in and around Chakan, Pune." } },
         { "@type": "Question", "name": "Can I order office stationery and housekeeping material along with manpower?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. Along with manpower, we supply stationery, housekeeping material, industrial consumables and IT & office equipment, so you can get people and supplies from one partner." } },
+        { "@type": "Question", "name": "Do you help with factory licences and statutory approvals?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We handle Factory Plan Approval and Factory Licence, MPCB consents (CTE/CTO), Fire NOC, boiler, electrical, lift and PESO approvals, from new application and documentation to renewal and authority follow-up." } },
         { "@type": "Question", "name": "How do I get a quotation?",
           "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp +91 89997 58775, or send your requirement through the enquiry form on this website. We send a clear, transparent quotation." } }
       ]
@@ -335,8 +338,46 @@ footer p{font-size:.9rem}
 .toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:var(--navy);color:#fff;padding:14px 26px;border-radius:50px;z-index:300;transition:.4s;font-weight:500;box-shadow:0 10px 30px rgba(0,0,0,.25)}
 .toast.show{transform:translate(-50%,0)}
 
+/* licensing & compliance */
+.licensing{background:#fff}
+.licensing .section-head{max-width:820px}
+.lic-badge{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:#ffc928;color:var(--navy);font-weight:700;font-size:.9rem;padding:10px 22px;border-radius:50px;box-shadow:0 10px 25px rgba(255,201,40,.35)}
+.lic-badge svg{width:22px;height:22px;stroke:var(--navy);flex:none}
+.lic-grid{display:grid;grid-template-columns:1fr 2fr;gap:26px;align-items:stretch}
+.lic-feats{display:grid;gap:18px}
+.lic-feat{background:var(--light);border-radius:20px;padding:24px;display:flex;gap:18px;align-items:center;box-shadow:0 10px 30px rgba(11,42,107,.07);transition:.4s}
+.lic-feat:hover{transform:translateX(8px);box-shadow:0 18px 40px rgba(21,101,216,.18)}
+.lic-feat-ic{width:58px;height:58px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--grad)}
+.lic-feat-ic svg{width:28px;height:28px;stroke:#fff}
+.lic-feat h3{color:var(--navy);font-size:1.08rem;line-height:1.3;margin-bottom:4px}
+.lic-feat p{color:var(--muted);font-size:.9rem}
+.lic-panel{background:#fff;border:1px solid #e6eefb;border-radius:24px;padding:22px 24px;box-shadow:0 20px 50px rgba(11,42,107,.1)}
+.lic-panel-head{display:flex;align-items:center;gap:12px;background:var(--navy);color:#fff;border-radius:50px;padding:12px 22px;font-weight:700;font-size:.92rem;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+.lic-panel-head svg{width:22px;height:22px;stroke:#fff;flex:none}
+.lic-list{display:grid;grid-template-columns:1fr 1fr;column-gap:30px}
+.lic-item{display:flex;gap:14px;align-items:center;padding:14px 4px;border-bottom:1px solid #eef3fb}
+.lic-item:nth-last-child(-n+2){border-bottom:none}
+.lic-ic{width:48px;height:48px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--cb);transition:.4s}
+.lic-ic svg{width:24px;height:24px;stroke:var(--c)}
+.lic-item:hover .lic-ic{transform:scale(1.12) rotate(-6deg)}
+.lic-item h3{color:var(--navy);font-size:.98rem;line-height:1.3}
+.lic-item p{color:var(--muted);font-size:.86rem;line-height:1.45}
+.lic-flow{display:grid;grid-template-columns:190px 1fr;gap:26px;margin-top:40px;align-items:stretch}
+.lic-flow-lead{background:var(--grad);color:#fff;font-weight:800;font-size:1.15rem;line-height:1.3;display:flex;align-items:center;padding:20px 40px 20px 24px;border-radius:18px 0 0 18px;clip-path:polygon(0 0,82% 0,100% 50%,82% 100%,0 100%)}
+.lic-steps{display:grid;grid-template-columns:repeat(7,1fr);gap:22px}
+.lic-step{position:relative;background:var(--cb);border-radius:16px;padding:18px 8px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;transition:.4s}
+.lic-step:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(11,42,107,.12)}
+.lic-step svg{width:28px;height:28px;stroke:var(--c)}
+.lic-step span{color:var(--navy);font-weight:700;font-size:.8rem;line-height:1.3}
+.lic-step:not(:last-child)::after{content:"›";position:absolute;right:-17px;top:50%;transform:translateY(-50%);color:#8a9ab5;font-size:1.5rem;font-weight:700}
+.lic-cta{text-align:center;margin-top:40px}
+
 /* responsive */
 @media(max-width:900px){
+  .lic-grid,.lic-flow{grid-template-columns:1fr}
+  .lic-flow-lead{clip-path:none;border-radius:18px;justify-content:center;padding:16px}
+  .lic-steps{grid-template-columns:repeat(4,1fr)}
+  .lic-step::after{display:none}
   .hero-grid,.about-grid,.contact-grid,.about-more{grid-template-columns:1fr}
   .hero{text-align:center}.hero p{margin-inline:auto}.hero-btns{justify-content:center}
   .hero-visual{order:-1}.logo-float{width:200px}
@@ -352,6 +393,11 @@ footer p{font-size:.9rem}
   section{padding:70px 0}
   .row,.checks{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
+  .lic-list{grid-template-columns:1fr}
+  .lic-item:nth-last-child(2){border-bottom:1px solid #eef3fb}
+  .lic-steps{grid-template-columns:repeat(2,1fr)}
+  .lic-panel{padding:18px 16px}
+  .lic-panel-head{font-size:.8rem;padding:10px 16px}
   form,.info-card{padding:30px 22px}
   .brand-text{font-size:1rem}
 }
@@ -388,6 +434,7 @@ footer p{font-size:.9rem}
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#licensing">Licensing</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact" class="btn btn-primary">Get a Quote</a></li>
@@ -510,6 +557,67 @@ footer p{font-size:.9rem}
   </div>
 </section>
 
+<!-- LICENSING & COMPLIANCE -->
+<section class="licensing" id="licensing">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Licensing & Compliance</span>
+      <h2>Factory Licensing & Statutory Compliance Support</h2>
+      <p>End-to-end assistance for all factory and industrial licenses, from new application to renewal.</p>
+      <div class="underline"></div>
+      <div class="lic-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M5 20V8l5 4V8l5 4V4h4v16"/></svg>Complete Licensing & Compliance Solutions Under One Roof</div>
+    </div>
+
+    <div class="lic-grid">
+      <div class="lic-feats">
+        <div class="lic-feat reveal left">
+          <div class="lic-feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></div>
+          <div><h3>Expert Guidance</h3><p>Across all statutory approvals.</p></div>
+        </div>
+        <div class="lic-feat reveal left">
+          <div class="lic-feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+          <div><h3>End-to-End Support</h3><p>Application, documentation and follow-up.</p></div>
+        </div>
+        <div class="lic-feat reveal left">
+          <div class="lic-feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <div><h3>Timely & Compliant Execution</h3><p>As per applicable laws and regulations.</p></div>
+        </div>
+      </div>
+
+      <div class="lic-panel reveal right">
+        <div class="lic-panel-head"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M5 20V8l5 4V8l5 4V4h4v16"/></svg>Key Licenses & Approvals We Manage</div>
+        <div class="lic-list">
+          <div class="lic-item"><div class="lic-ic" style="--c:#1565d8;--cb:#e8f1fd"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M5 20V8l5 4V8l5 4V4h4v16"/></svg></div><div><h3>Factory Plan Approval & Factory Licence</h3><p>Application, plan submission, approval & renewal</p></div></div>
+          <div class="lic-item"><div class="lic-ic" style="--c:#e0a100;--cb:#fdf4dc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><h3>Electrical Approvals</h3><p>Electrical installation approval, inspection & periodic renewal</p></div></div>
+          <div class="lic-item"><div class="lic-ic" style="--c:#2e9e5b;--cb:#e6f5ec"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><div><h3>MPCB Approvals</h3><p>Consent to Establish (CTE) / Consent to Operate (CTO) & renewal</p></div></div>
+          <div class="lic-item"><div class="lic-ic" style="--c:#6b4fc8;--cb:#efebfb"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 2v20M7 10l1.5-2 1.5 2M14 14l1.5 2 1.5-2"/></svg></div><div><h3>Lift Registration & Licence</h3><p>Installation, inspection & annual renewal</p></div></div>
+          <div class="lic-item"><div class="lic-ic" style="--c:#d9534f;--cb:#fbe9e9"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div><h3>Fire NOC</h3><p>Fire safety approval from competent authority</p></div></div>
+          <div class="lic-item"><div class="lic-ic" style="--c:#1e8fa8;--cb:#e3f4f8"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M12 2v3"/><rect x="7" y="5" width="10" height="17" rx="4"/><path d="M7 11h10"/></svg></div><div><h3>PESO Approvals</h3><p>For storage & use of hazardous / pressurized gases (as applicable)</p></div></div>
+          <div class="lic-item"><div class="lic-ic" style="--c:#c0672a;--cb:#fbefe5"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="15" rx="3"/><circle cx="12" cy="11" r="3"/><path d="m12 11 1.5-1.5M8 22v-3M16 22v-3M12 4V2"/></svg></div><div><h3>Boiler Registration & Licence</h3><p>For industrial boilers & pressure vessels</p></div></div>
+          <div class="lic-item"><div class="lic-ic" style="--c:#c2185b;--cb:#fce8f0"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div><div><h3>Other Industrial Approvals</h3><p>As per the nature of your business (e.g. explosives, pollution-related, safety, etc.)</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lic-flow reveal">
+      <div class="lic-flow-lead">Our Services Include</div>
+      <div class="lic-steps">
+        <div class="lic-step" style="--c:#1565d8;--cb:#e8f1fd"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15h6"/></svg><span>New Application</span></div>
+        <div class="lic-step" style="--c:#6b4fc8;--cb:#efebfb"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M14 10h4M14 14h4M5 16.5c.5-1.3 1.7-2 3-2s2.5.7 3 2"/></svg><span>Registration</span></div>
+        <div class="lic-step" style="--c:#2e9e5b;--cb:#e6f5ec"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/></svg><span>Renewal</span></div>
+        <div class="lic-step" style="--c:#c0672a;--cb:#fbefe5"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span>Amendment / Modification</span></div>
+        <div class="lic-step" style="--c:#1e8fa8;--cb:#e3f4f8"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4M20 7H4M8 21l-4-4 4-4M4 17h16"/></svg><span>Transfer<br>(as applicable)</span></div>
+        <div class="lic-step" style="--c:#0b2a6b;--cb:#e9eef7"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg><span>Documentation & Submission</span></div>
+        <div class="lic-step" style="--c:#d9534f;--cb:#fbe9e9"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Authority Follow-up & Compliance Support</span></div>
+      </div>
+    </div>
+
+    <div class="lic-cta reveal">
+      <a href="https://wa.me/918999758775?text=Hello%20Teams%20Facility%2C%20I%20need%20help%20with%20factory%20licensing%20and%20compliance." target="_blank" rel="noopener" class="btn btn-blue">Enquire About Licensing →</a>
+    </div>
+  </div>
+</section>
+
 <!-- INDUSTRIES MARQUEE -->
 <div class="industries">
   <div class="marquee" id="marquee">
@@ -560,6 +668,7 @@ footer p{font-size:.9rem}
       <details><summary>Do you supply manpower in Chakan MIDC?</summary><p>Yes. Teams Facility supplies skilled and semi-skilled workers, helpers, machine operators and loaders to factories and plants in Chakan MIDC, Nighoje, Talegaon, Bhosari and across Pune.</p></details>
       <details><summary>Do you provide housekeeping staff for offices and housing societies?</summary><p>Yes. We provide trained housekeeping staff for offices, factories, hospitals, hotels and residential societies in and around Chakan, Pune.</p></details>
       <details><summary>Can I order office stationery and housekeeping material along with manpower?</summary><p>Yes. Along with manpower, we supply stationery, housekeeping material, industrial consumables and IT & office equipment, so you can get people and supplies from one partner.</p></details>
+      <details><summary>Do you help with factory licences and statutory approvals?</summary><p>Yes. We handle Factory Plan Approval and Factory Licence, MPCB consents (CTE/CTO), Fire NOC, boiler, electrical, lift and PESO approvals, from new application and documentation to renewal and authority follow-up.</p></details>
       <details><summary>How do I get a quotation?</summary><p>Call or WhatsApp +91 89997 58775, or send your requirement through the enquiry form on this website. We send a clear, transparent quotation.</p></details>
     </div>
   </div>
@@ -607,7 +716,7 @@ footer p{font-size:.9rem}
           <div class="field"><label for="service">Service Needed</label>
             <select id="service">
               <option>Industrial Manpower</option><option>Stationery & Office Supplies</option>
-              <option>Housekeeping Services & Material</option><option>Industrial Materials</option><option>IT & Office Equipment</option><option>Corporate Event Support</option><option>Other</option>
+              <option>Housekeeping Services & Material</option><option>Industrial Materials</option><option>IT & Office Equipment</option><option>Corporate Event Support</option><option>Factory Licensing & Compliance</option><option>Other</option>
             </select>
           </div>
         </div>
@@ -633,7 +742,7 @@ footer p{font-size:.9rem}
     </div>
     <address style="font-style:normal"><p>Manpower, Housekeeping Material & Workplace Supplies · Nighoje, Chakan, Pune, Maharashtra – 410501</p></address>
     <div class="foot-links">
-      <a href="#about">About</a><a href="#services">Services</a><a href="#products">Products</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#services">Services</a><a href="#licensing">Licensing</a><a href="#products">Products</a><a href="#contact">Contact</a>
       <a href="tel:+918999758775">+91 89997 58775</a>
     </div>
     <div class="copy">© <span id="year"></span> Teams Facility. All rights reserved.</div>
